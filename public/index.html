@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Socket.IO chat</title>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.dev.js"></script>
+   <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+   </head>
+   <body>
+    <button id="clickme">Click me!</button>
+    <script>
+      $(function () {
+        const socket = io.connect('http://localhost:3000/');
+
+        socket.on('new_connection', function(){
+          console.log('Someone has joined the conversation');
+        });
+        socket.on('new_disconnection', function(){
+          console.log('Someone has left the conversation');
+        });
+        $('#clickme').on('click', function(){
+          socket.emit('click', new Date());
+        });
+        socket.on('new_click', function(time){
+          console.log('Someone has clicked the button at ' + time);
+        });           
+      });
+    </script>
+  </body>
+</html>
+
