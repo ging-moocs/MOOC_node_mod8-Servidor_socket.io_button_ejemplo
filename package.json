@@ -1,5 +1,5 @@
 {
-  "name": "button-socket-io",
+  "name": "MOOC_node_mod8-Servidor_socket.io_button_ejemplo",
   "version": "1.0.0",
   "description": "Websocket button example",
   "scripts": {

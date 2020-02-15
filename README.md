@@ -8,7 +8,7 @@
 
  - Descargar el repositorio
 	```
-	git clone https://github.com/sonsoleslp/MOOC_3_2020-Servidor_socket.io_button_ejemplo
+	git clone https://github.com/sonsoleslp/MOOC_node_mod8-Servidor_socket.io_button_ejemplo
 	```
  - Acceder al directorio del proyecto:
  	```
